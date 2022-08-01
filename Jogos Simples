@@ -18,7 +18,7 @@ for c in range(10):
         print('Você digitou errado, tente novamente: ')
 print('\033[31m    FIM DE JOGO\033[m     ')
 print('Você ganhou {} vezes'.format(a))
-if a >= 3:
+if a >= 4:
     print('\033[32mParabéns, você foi muito bem!!\033[m')
-elif a <= 1:
+elif a <= 2:
     print('\033[31mHoje não é o seu dia de sorte\033[m')
