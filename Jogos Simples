@@ -1,0 +1,24 @@
+from random import choice
+print('-'*30)
+print('\033[34m   BEM VINDO AO JOKENPÔ\033[m   ')
+print('-'*30)
+perdeu = 0
+a = 0
+for c in range(10):
+    Esc = str(input('Escolha: pedra, papel ou tesoura:  '))
+    b = choice(['pedra', 'papel', 'tesoura'])
+    if Esc == b:
+        print('O computador escolheu {}, \033[35mEmpatou!\033[m'.format(b))
+    elif Esc == 'papel'and b == 'pedra' or Esc == 'tesoura' and b == 'papel' or Esc == 'pedra' and b == 'tesoura':
+        print('O computador escolheu {}, \033[32mVocê venceu!\033[m'.format(b))
+        a += 1
+    elif Esc == 'papel' and b == 'tesoura' or Esc == 'tesoura' and b == 'pedra' or Esc == 'pedra' and b == 'papel':
+        print('O computador escolheu {}, \033[31mVocê perdeu\033[m!'.format(b))
+    else:
+        print('Você digitou errado, tente novamente: ')
+print('\033[31m    FIM DE JOGO\033[m     ')
+print('Você ganhou {} vezes'.format(a))
+if a >= 3:
+    print('\033[32mParabéns, você foi muito bem!!\033[m')
+elif a <= 1:
+    print('\033[31mHoje não é o seu dia de sorte\033[m')
